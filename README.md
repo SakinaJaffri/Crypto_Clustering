@@ -1,4 +1,4 @@
-# Crypto Clustering
+# Crypto Clustering (Unsupervised Learning)
 
 ![Crypto Image](https://github.com/SakinaJaffri/Crypto_Clustering/assets/146900226/57c597d0-ac2b-4352-bd90-5e38710cc00f)
 
