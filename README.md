@@ -1,39 +1,55 @@
-# Crypto_Clustering
-![bitcoin-3089728_1280](https://github.com/SakinaJaffri/Crypto_Clustering/assets/146900226/57c597d0-ac2b-4352-bd90-5e38710cc00f)
+# Crypto Clustering
 
+![Crypto Image](https://github.com/SakinaJaffri/Crypto_Clustering/assets/146900226/57c597d0-ac2b-4352-bd90-5e38710cc00f)
 
-**Introduction:**
+## Overview
 
-In this project, I utilized Python and unsupervised learning techniques to analyze cryptocurrency data. The goal was to predict the impact of price changes over 24 hours or 7 days on various cryptocurrencies.
+This project applies **unsupervised learning** techniques, particularly **K-means clustering**, to analyze cryptocurrency data. Using Python, the goal is to explore patterns in price changes over 24 hours and 7 days for various cryptocurrencies, and predict their behavior based on clustering.
 
-**Data Preparation:**
+## Project Workflow
 
-- Normalized the data using the StandardScaler() module from scikit-learn.
-- Created a DataFrame with the scaled data, setting "coin_id" as the index.
+### 1. Data Preparation
+- Normalized the cryptocurrency data using `StandardScaler()` from `scikit-learn`.
+- Created a DataFrame with the scaled data, setting `"coin_id"` as the index.
 
-**Finding the Best k Value with Original Scaled Data:**
+### 2. Finding the Optimal k Value
+- Applied the **elbow method** to identify the best value of k (number of clusters).
+- Tested k values from 1 to 11 and calculated inertia for each.
+- Plotted a line chart to visualize inertia and select the optimal k value.
 
-- Applied the elbow method to determine the optimal k value.
-- Tested k values ranging from 1 to 11 and computed inertia values for each.
-- Plotted a line chart to visualize inertia and identify the best k.
+### 3. Clustering Cryptocurrencies with K-means
+- Used the best k value obtained from the elbow method to cluster the original scaled data.
+- Generated a **scatter plot** displaying clusters based on 24-hour and 7-day price changes.
 
-**Clustering Cryptocurrencies with K-means (Original Scaled Data):**
+### 4. Principal Component Analysis (PCA)
+- Performed **PCA** to reduce the dataset to three principal components for simplified clustering.
+- Analyzed the explained variance for each component to evaluate their contribution.
 
-- Clustered cryptocurrencies using the best k value obtained.
-- Generated a scatter plot with price change percentages for 24 hours and 7 days.
+### 5. Finding the Best k Value for PCA Data
+- Applied the elbow method again on the PCA-transformed data to find the best k value for clustering.
 
-**Optimizing Clusters with Principal Component Analysis (PCA):**
+### 6. Clustering Cryptocurrencies with K-means (PCA Data)
+- Clustered cryptocurrencies using the optimal k value determined from the PCA data.
+- Visualized the clusters using a scatter plot based on the PCA components.
 
-- Conducted PCA to reduce features to three principal components.
-- Evaluated explained variance to understand each component's contribution.
+## Results
+The project successfully clustered cryptocurrencies based on their price change patterns over short-term periods (24 hours and 7 days), both with the original scaled data and after applying PCA for feature reduction. These clusters help reveal trends in cryptocurrency market behavior.
 
-**Finding the Best k Value with PCA Data:**
+## Technologies Used
+- **Python**
+- **Pandas**
+- **Scikit-learn**
+- **Matplotlib**
+- **K-means Clustering**
+- **Principal Component Analysis (PCA)**
 
-- Utilized the elbow method on PCA data to find the best k value.
+## How to Use
+1. Clone the repository to your local machine.
+2. Install the required dependencies listed in `requirements.txt`.
+3. Run the Jupyter Notebook provided to execute the analysis and visualize the clusters.
 
-**Clustering Cryptocurrencies with K-means (PCA Data):**
+## Conclusion
+This project showcases the use of unsupervised learning techniques for analyzing cryptocurrency data. It highlights the importance of feature scaling and dimensionality reduction for efficient clustering, and demonstrates how machine learning models can be used to identify trends in complex datasets.
 
-- Clustered cryptocurrencies using the best k value determined from PCA.
-- Plotted a scatter plot with PCA components.
-
-This project facilitated the identification of patterns in cryptocurrency data and clustering based on price change trends.
+## Contributors
+- **Sakina Jaffri** - Project Developer
